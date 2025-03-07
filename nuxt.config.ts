@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   nitro: {
     preset: "cloudflare"
   },
+  ssr: true,
   modules: [
     '@nuxt/content',
     '@nuxtjs/tailwindcss',
