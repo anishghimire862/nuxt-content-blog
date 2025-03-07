@@ -2,7 +2,9 @@ name = "sarvatech"
 main = ".output/server/index.mjs"
 compatibility_date = "2025-02-12"
 
-routes = ["*.sarvatech.anishghimire862.workers.dev/*"]
+[assets]
+binding = "ASSETS"
+directory = ".output/public/"
 
 [observability.logs]
 enabled = true
