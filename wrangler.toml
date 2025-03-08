@@ -8,3 +8,8 @@ directory = ".output/public/"
 
 [observability.logs]
 enabled = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "nuxt-content"
+database_id = "968681e6-9ec1-48ef-861b-014f4a45865a"
