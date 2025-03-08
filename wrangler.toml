@@ -1,5 +1,6 @@
 name = "sarvatech"
 main = ".output/server/index.mjs"
+pages_build_output_dir = "./dist"
 compatibility_date = "2025-02-12"
 
 [assets]
