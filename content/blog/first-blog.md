@@ -2,7 +2,7 @@
 title: "The Art of Serendipity"
 slug: "the-art-of-serendipity"
 description: "Exploring the unexpected joys and discoveries that come from chance encounters and happy accidents."
-published: true
+published: false
 posted: "Jan 30, 2025"
 author: "Anish Ghimire"
 ---

@@ -15,10 +15,6 @@ if (error.value) {
     </div>
 
     <div class="mx-auto max-w-md md:max-w-2xl space-y-6">
-      <ProseBlockquote>
-        {{ blog.description }}
-      </ProseBlockquote>
-
       <ContentRenderer class="prose" :value="blog" />
 
       <div class="space-y-4 border border-gray-100 p-4 shadow-md">
