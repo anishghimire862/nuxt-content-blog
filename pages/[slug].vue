@@ -24,6 +24,8 @@ if (error.value) {
               class="w-full h-full object-cover"
               alt="Anish Ghimire"
               src="/img/anish-ghimire.jpeg"
+              placeholder
+              loading="lazy"
             />
           </div>
           <div class="space-y-0.5">
