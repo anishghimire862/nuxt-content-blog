@@ -36,7 +36,7 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-        { name: 'description', content: 'A complete technical blog solution. Discover blogs on Artificial Intelligence (AI), NodeJS, NuxtJS, AdonisJS, VueJS, and more.' }
+        { name: 'description', content: 'A complete technical blog platform. Discover blogs on Artificial Intelligence (AI), NodeJS, NuxtJS, AdonisJS, VueJS, and more.' }
       ],
       link: [
         { rel: 'icon', href: '/favicon.ico' },

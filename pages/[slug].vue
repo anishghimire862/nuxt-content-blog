@@ -34,7 +34,7 @@ if (blog.value) {
     link: [
       {
         rel: "canonical",
-        href: `${runtimeConfig.public.domain}/${slug}`,
+        href: `${runtimeConfig.public.domain}/${blog.value.slug}`,
       },
       {
         rel: "sitemap",
@@ -59,7 +59,7 @@ if (blog.value) {
             name: `${runtimeConfig.public.name}`,
             logo: {
               "@type": "ImageObject",
-              url: `${runtimeConfig.public.domain}/logo.png`,
+              url: `${runtimeConfig.public.domain}/sarvalekh.png`,
             },
           },
         }),
@@ -72,7 +72,9 @@ if (blog.value) {
 <template>
   <div v-if="blog" class="space-y-6 mt-6 p-2">
     <div class="flex justify-center">
-      <ProseH1>{{ blog.title }}</ProseH1>
+      <h1 class="text-3xl font-bold text-gray-500 leading-tight">
+        {{ blog.title }}
+      </h1>
     </div>
 
     <div class="mx-auto max-w-md md:max-w-2xl space-y-6">
