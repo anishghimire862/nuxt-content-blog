@@ -3,7 +3,6 @@ const runtimeConfig = useRuntimeConfig();
 const route = useRoute();
 
 const { slug } = route.params;
-console.log(route.params);
 const { data: blog, error } = await useAsyncData<Blog>("blog", () =>
   queryCollection("blog").where("slug", "=", slug).first()
 );
@@ -57,7 +56,7 @@ if (blog.value) {
           headline: blog.value.title,
           description: blog.value.description,
           image: blog.value.banner,
-          url: `${runtimeConfig.public.domain}/blog/${slug}`,
+          url: `${runtimeConfig.public.domain}/blog/${blog.value.slug}`,
           author: { "@type": "Person", name: "Anish Ghimire" },
           datePublished: blog.value.posted,
           publisher: {
@@ -85,6 +84,7 @@ if (blog.value) {
 
     <div class="mx-auto max-w-md md:max-w-2xl space-y-6">
       <div
+        v-if="blog.banner"
         class="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg overflow-hidden flex-shrink-0"
       >
         <NuxtImg

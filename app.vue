@@ -33,14 +33,15 @@
 
 <script setup lang="ts">
 const runtimeConfig = useRuntimeConfig();
-const currentRoute = ref("");
-
 const route = useRoute();
+
+const currentRoute = ref(route.path);
+
 watchEffect(() => {
-  currentRoute.value = route.path;
+  currentRoute.value = route.path ?? "/";
 });
 
 useHead({
-  titleTemplate: `%s | ${runtimeConfig.public.name}`,
+  titleTemplate: `%s | ${runtimeConfig.public.name ?? "Sarva Lekh"}`,
 });
 </script>

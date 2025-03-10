@@ -21,7 +21,6 @@ const { data: blogs, error } = await useAsyncData<Blog[]>("blog", () =>
     .where("published", "=", true)
     .all()
 );
-console.log(blogs.value);
 if (error.value) {
   console.error("Error fetching blogs:", error.value);
 }
