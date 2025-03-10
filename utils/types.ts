@@ -5,4 +5,5 @@ export interface Blog {
   author: string;
   posted: string;
   published: boolean;
+  banner: string;
 }

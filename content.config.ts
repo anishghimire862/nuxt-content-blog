@@ -12,6 +12,7 @@ export default defineContentConfig({
         author: z.string(),
         published: z.boolean(),
         posted: z.string(),
+        banner: z.string()
       })
     }),
   },

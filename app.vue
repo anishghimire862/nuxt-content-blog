@@ -7,7 +7,7 @@
         <span
           class="font-sans text-xl subpixel-antialiased font-extrabold tracking-wide text-blue-500"
         >
-          Sarva Tech
+          Sarva Lekh
         </span>
       </NuxtLink>
       <div>
@@ -33,8 +33,14 @@
 
 <script setup lang="ts">
 const currentRoute = ref("");
+const runtimeConfig = useRuntimeConfig();
+
 const route = useRoute();
 watchEffect(() => {
   currentRoute.value = route.path;
+});
+
+useHead({
+  titleTemplate: `%s | ${runtimeConfig.public.name}`,
 });
 </script>

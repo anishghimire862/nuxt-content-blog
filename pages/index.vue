@@ -9,7 +9,15 @@
 <script lang="ts" setup>
 const { data: blogs, error } = await useAsyncData<Blog[]>("blog", () =>
   queryCollection("blog")
-    .select("title", "slug", "description", "author", "posted", "published")
+    .select(
+      "title",
+      "slug",
+      "description",
+      "author",
+      "posted",
+      "published",
+      "banner"
+    )
     .where("published", "=", true)
     .all()
 );

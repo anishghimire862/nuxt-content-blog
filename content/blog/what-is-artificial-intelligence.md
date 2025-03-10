@@ -5,13 +5,18 @@ description: "Artificial intelligence (AI) refers to computer systems or machine
 published: true
 posted: "March 9, 2025"
 author: "Anish Ghimire"
+banner: "/img/ai-introduction/ai-introduction-banner.png"
 ---
 
 Artificial intelligence (AI) refers to computer systems or machines designed to simulate human-like intelligence, enabling them to perform tasks such as reasoning, problem-solving, learning, adaptation, perception, and decision-making.
 
+![Introduction to AI](/img/ai-introduction/ai-introduction-banner.png)
+
 AI systems use algorithms, data, and machine learning (a process of iterative improvement) to autonomously adapt, improve, and execute tasks. AI autonomy means an AI can operate, make decisions, and complete tasks with varying levels of human supervision .
 
 ### Narrow AI vs. General AI
+
+#### Narrow AI (Weak AI)
 
 Narrow AI (or weak AI) is a type of artificial intelligence specialized in performing a limited set of tasks . Examples include:
 
@@ -21,7 +26,7 @@ Narrow AI (or weak AI) is a type of artificial intelligence specialized in perfo
 
 These systems excel at specific tasks but lack general intelligence.
 
-### General AI (AGI or Strong AI)
+#### General AI (AGI or Strong AI)
 
 Artificial General Intelligence (AGI), also called Strong AI, is a theoretical form of AI that would possess human-level intelligence. It could:
 
