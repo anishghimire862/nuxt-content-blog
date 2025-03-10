@@ -1,7 +1,7 @@
 <template>
-  <div class="mx-auto max-w-md md:max-w-1xl">
+  <div v-if="blogs" class="mx-auto max-w-md md:max-w-1xl">
     <div v-for="blog in blogs" class="my-4 border-b border-b-gray-200">
-      <ArticlePreview :blog="blog" :key="blog.slug" />
+      <ArticlePreview v-if="blog" :blog="blog" :key="blog.slug" />
     </div>
   </div>
 </template>
@@ -21,6 +21,7 @@ const { data: blogs, error } = await useAsyncData<Blog[]>("blog", () =>
     .where("published", "=", true)
     .all()
 );
+console.log(blogs.value);
 if (error.value) {
   console.error("Error fetching blogs:", error.value);
 }

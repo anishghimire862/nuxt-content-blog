@@ -32,8 +32,8 @@
 </template>
 
 <script setup lang="ts">
-const currentRoute = ref("");
 const runtimeConfig = useRuntimeConfig();
+const currentRoute = ref("");
 
 const route = useRoute();
 watchEffect(() => {

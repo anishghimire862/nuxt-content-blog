@@ -1,8 +1,9 @@
 <script lang="ts" setup>
-const route = useRoute();
 const runtimeConfig = useRuntimeConfig();
+const route = useRoute();
 
 const { slug } = route.params;
+console.log(route.params);
 const { data: blog, error } = await useAsyncData<Blog>("blog", () =>
   queryCollection("blog").where("slug", "=", slug).first()
 );
@@ -24,7 +25,7 @@ if (blog.value) {
       },
       {
         property: "og:url",
-        content: `https://sarvalekh.com/${blog.value.slug}`,
+        content: `https://sarvalekh.com/blog/${blog.value.slug}`,
       },
       { property: "og:type", content: "article" },
 
