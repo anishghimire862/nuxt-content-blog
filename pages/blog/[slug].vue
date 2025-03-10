@@ -16,25 +16,30 @@ if (blog.value) {
     meta: [
       { name: "description", content: blog.value.description },
 
+      { property: "og:title", content: blog.value.title },
+      { property: "og:description", content: blog.value.description },
       {
         property: "og:image",
         content: blog.value.banner,
       },
-      { property: "og:title", content: blog.value.title },
-      { property: "og:description", content: blog.value.description },
+      {
+        property: "og:url",
+        content: `https://sarvalekh.com/${blog.value.slug}`,
+      },
+      { property: "og:type", content: "article" },
 
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: blog.value.title },
+      { name: "twitter:description", content: blog.value.description },
       {
         name: "twitter:image",
         content: blog.value.banner,
       },
-      { name: "twitter:title", content: blog.value.title },
-      { name: "twitter:description", content: blog.value.description },
-      { name: "twitter:card", content: "summary_large_image" },
     ],
     link: [
       {
         rel: "canonical",
-        href: `${runtimeConfig.public.domain}/${blog.value.slug}`,
+        href: `${runtimeConfig.public.domain}/blog/${blog.value.slug}`,
       },
       {
         rel: "sitemap",
@@ -45,13 +50,13 @@ if (blog.value) {
     script: [
       {
         type: "application/ld+json",
-        children: JSON.stringify({
+        innerHTML: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BlogPosting",
           headline: blog.value.title,
           description: blog.value.description,
           image: blog.value.banner,
-          url: `${runtimeConfig.public.domain}/${slug}`,
+          url: `${runtimeConfig.public.domain}/blog/${slug}`,
           author: { "@type": "Person", name: "Anish Ghimire" },
           datePublished: blog.value.posted,
           publisher: {
@@ -97,6 +102,10 @@ if (blog.value) {
         />
       </div>
 
+      <ProseBlockquote>
+        {{ blog.description }}
+      </ProseBlockquote>
+
       <ContentRenderer class="prose" :value="blog" />
 
       <div class="space-y-4 border border-gray-100 p-4 shadow-md">
@@ -105,7 +114,7 @@ if (blog.value) {
             <NuxtImg
               class="w-full h-full object-cover"
               alt="Anish Ghimire"
-              src="/img/anish-ghimire.jpeg"
+              src="/anish-ghimire.jpeg"
               placeholder
               loading="lazy"
             />
