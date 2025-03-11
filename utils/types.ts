@@ -7,3 +7,9 @@ export interface Blog {
   published: boolean;
   banner: string;
 }
+
+declare module '#app' {
+  interface NuxtApp {
+    $loadAnalyticsScript: () => void;
+  }
+}

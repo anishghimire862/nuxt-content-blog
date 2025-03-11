@@ -21,25 +21,26 @@ export default defineNuxtConfig({
     public: {
       name: 'Sarva Lekh',
       domain: 'https://sarvalekh.com',
+      GOOGLE_ANALYTICS_ID: 'G-0ZZ5KJG1J5'
     }
   },
   app: {
     head: {
-      title: 'Technical Blogs on AI, NodeJS, VueJS & More',
+      title: 'Technical Blogs on AI, Software Development & More',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-        { name: 'description', content: 'Discover blogs on AI, NodeJS, NuxtJS, VueJS, AdonisJS, Bash scripting, and software development. Learn from personal experiences and industry insights.' },
+        { name: 'description', content: 'Explore blogs on AI, software development, tutorials, and industry insights. Learn from personal experiences, tips, and expert advice for tech enthusiasts.' },
 
-        { property: 'og:title', content: 'Technical Blogs on AI, NodeJS, VueJS & More' },
-        { property: 'og:description', content: 'Discover blogs on AI, NodeJS, NuxtJS, VueJS, AdonisJS, Bash scripting, and software development.' },
+        { property: 'og:title', content: 'Technical Blogs on AI, Software Development & More' },
+        { property: 'og:description', content: 'Explore blogs on AI, software development, tutorials, and industry insights. Learn from personal experiences, tips, and expert advice for tech enthusiasts.' },
         { property: 'og:image', content: '/sarvalekh.png' },
         { property: 'og:url', content: 'https://sarvalekh.com' },
         { property: 'og:type', content: 'website' },
 
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Technical Blogs on AI, NodeJS, VueJS & More' },
-        { name: 'twitter:description', content: 'Discover blogs on AI, NodeJS, NuxtJS, VueJS, AdonisJS, Bash scripting, and software development.' },
+        { name: 'twitter:title', content: 'Technical Blogs on AI, Software Development & More' },
+        { name: 'twitter:description', content: 'Explore blogs on AI, software development, tutorials, and industry insights. Learn from personal experiences, tips, and expert advice for tech enthusiasts.' },
         { name: 'twitter:image', content: '/sarvalekh.png' }
 
       ],

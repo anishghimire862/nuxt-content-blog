@@ -28,11 +28,14 @@
 
     <NuxtLoadingIndicator />
     <NuxtPage />
+    <CookieConsentBanner />
   </div>
 </template>
 
 <script setup lang="ts">
 const runtimeConfig = useRuntimeConfig();
+const { $loadAnalyticsScript } = useNuxtApp();
+
 const route = useRoute();
 
 const currentRoute = ref(route.path);
@@ -43,5 +46,9 @@ watchEffect(() => {
 
 useHead({
   titleTemplate: `%s | ${runtimeConfig.public.name ?? "Sarva Lekh"}`,
+});
+
+onMounted(() => {
+  $loadAnalyticsScript();
 });
 </script>
