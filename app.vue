@@ -34,9 +34,8 @@
 
 <script setup lang="ts">
 const runtimeConfig = useRuntimeConfig();
-const { $loadAnalyticsScript } = useNuxtApp();
-
 const route = useRoute();
+const { gtag, initialize } = useGtag();
 
 const currentRoute = ref(route.path);
 
@@ -49,6 +48,14 @@ useHead({
 });
 
 onMounted(() => {
-  $loadAnalyticsScript();
+  if (localStorage.getItem("cookie-consent")) {
+    initialize();
+    gtag("consent", "update", {
+      ad_user_data: "granted",
+      ad_personalization: "granted",
+      ad_storage: "granted",
+      analytics_storage: "granted",
+    });
+  }
 });
 </script>

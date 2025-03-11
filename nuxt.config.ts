@@ -5,7 +5,16 @@ export default defineNuxtConfig({
     preset: "cloudflare_pages"
   },
   ssr: true,
-  modules: ['@nuxtjs/sitemap', '@nuxt/content', '@nuxtjs/tailwindcss', '@nuxtjs/mdc', '@nuxt/icon', '@nuxt/image', 'shadcn-nuxt'],
+  modules: [
+    '@nuxtjs/sitemap',
+    '@nuxt/content',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/mdc',
+    '@nuxt/icon',
+    '@nuxt/image',
+    'shadcn-nuxt',
+    'nuxt-gtag'
+  ],
   content: {
     build: {
       markdown: {
@@ -16,6 +25,20 @@ export default defineNuxtConfig({
   shadcn: {
     prefix: '',
     componentDir: './components/ui'
+  },
+  gtag: {
+    id: 'G-0ZZ5KJG1J5',
+    initMode: 'manual',
+    initCommands: [
+      ['consent', 'default', {
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
+        wait_for_update: 500,
+      }]
+    ]
+
   },
   runtimeConfig: {
     public: {
