@@ -6,6 +6,7 @@ export interface Blog {
   posted: string;
   published: boolean;
   banner: string;
+  bannerAlt: string
 }
 
 declare module '#app' {

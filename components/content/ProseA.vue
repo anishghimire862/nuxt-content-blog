@@ -26,7 +26,7 @@ const props = defineProps({
       | null
       | undefined
     >,
-    default: undefined,
+    default: "_blank",
     required: false,
   },
 });

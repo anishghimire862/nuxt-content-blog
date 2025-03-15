@@ -44,7 +44,6 @@ export default defineNuxtConfig({
     public: {
       name: 'Sarva Lekh',
       domain: 'https://sarvalekh.com',
-      GOOGLE_ANALYTICS_ID: 'G-0ZZ5KJG1J5'
     }
   },
   app: {
@@ -69,6 +68,10 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', href: '/favicon.ico' },
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'
+        },
       ],
       htmlAttrs: {
         lang: 'en',

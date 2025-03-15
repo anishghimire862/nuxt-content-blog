@@ -5,7 +5,7 @@
     >
       <NuxtLink to="/">
         <span
-          class="font-sans text-xl subpixel-antialiased font-extrabold tracking-wide text-blue-500"
+          class="text-xl subpixel-antialiased font-extrabold tracking-wide text-blue-500"
         >
           Sarva Lekh
         </span>
@@ -28,6 +28,7 @@
 
     <NuxtLoadingIndicator />
     <NuxtPage />
+
     <CookieConsentBanner />
   </div>
 </template>

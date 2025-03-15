@@ -89,7 +89,7 @@ if (blog.value) {
       >
         <NuxtImg
           class="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105"
-          :alt="blog.title"
+          :alt="blog.bannerAlt"
           :src="blog.banner"
           loading="lazy"
           :placeholder="[1280, 720]"
@@ -115,6 +115,7 @@ if (blog.value) {
             <NuxtImg
               class="w-full h-full object-cover"
               alt="Anish Ghimire"
+              format="webp"
               src="/anish-ghimire.jpeg"
               placeholder
               loading="lazy"

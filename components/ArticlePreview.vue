@@ -11,7 +11,7 @@
       >
         <NuxtImg
           class="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105"
-          :alt="blog.title"
+          :alt="blog.bannerAlt"
           :src="blog.banner"
           loading="eager"
           :placeholder="[1280, 720]"
@@ -26,7 +26,7 @@
       </div>
 
       <div class="pb-4 space-y-2">
-        <ProseP>{{ blog.description }}</ProseP>
+        <ProseP class="text-balance">{{ blog.description }}</ProseP>
         <div class="text-xs text-gray-400">
           {{ blog.posted }}
         </div>

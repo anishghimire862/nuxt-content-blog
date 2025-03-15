@@ -16,7 +16,8 @@ const { data: blogs, error } = await useAsyncData<Blog[]>("blog", () =>
       "author",
       "posted",
       "published",
-      "banner"
+      "banner",
+      "bannerAlt"
     )
     .where("published", "=", true)
     .all()
