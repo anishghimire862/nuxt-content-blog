@@ -1,7 +1,8 @@
 ---
+id: 1
 title: "An introduction to Artificial Intelligence"
 slug: "an-introduction-to-artificial-intelligence"
-description: "In this blog, we will discuss the definition of Artificial Intelligence (AI), briefly explore its history, types, and branches, and examine how machine learning, neural networks, and natural language processing work together through a real-world example."
+description: "In this blog, we will discuss about Artificial Intelligence (AI), explore its history, types, and branches, and examine how different branches of AI work together through a real-world example."
 published: true
 posted: "March 15, 2025"
 author: "Anish Ghimire"
@@ -124,11 +125,11 @@ Now that we've explored machine learning, neural networks, and natural language 
 
 To make the picture clearer, let's take the example of a virtual assistant like [Siri](https://www.apple.com/siri/) or [Alexa](https://alexa.com/) answering a question about the weather.
 
-**Step 1:** You ask Siri, "Hey Siri, what's the weather like today?"
+**Step 1**: You ask Siri, "Hey Siri, what's the weather like today?"
 
 Once you ask Siri about the weather, it uses NLP to convert your spoken words into text. This part is called speech recognition.
 
-**Step 2:** Understanding the text
+**Step 2**: Understanding the text
 
 The system behind Siri uses NLP and neural networks to understand what you are asking.
 
@@ -138,7 +139,7 @@ Neural networks help in recognizing patterns. For instance, they might identify 
 
 Modern NLP often uses transformers (a type of neural network, such as BERT or GPT) to understand the context and relationships between words.
 
-**Step 3:** Learning from past interactions
+**Step 3**: Learning from past interactions
 
 The role of ML comes into play when deciding what to do next based on what it has learned. The virtual assistant uses ML to improve over time by learning from past interactions. The ML algorithms analyze patterns in user queries to predict the best response or action.
 

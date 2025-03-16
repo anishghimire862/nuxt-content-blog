@@ -20,6 +20,7 @@ const { data: blogs, error } = await useAsyncData<Blog[]>("blog", () =>
       "bannerAlt"
     )
     .where("published", "=", true)
+    .order("posted", "DESC")
     .all()
 );
 if (error.value) {
