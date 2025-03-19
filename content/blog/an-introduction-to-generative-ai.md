@@ -5,7 +5,7 @@ slug: "an-introduction-to-generative-ai"
 description: "In this blog, we'll take a closer look at Generative Artificial Intelligence (Gen AI), explore its applications, rise, and examine how branches of AI come together."
 published: true
 posted: "March 16, 2025"
-author: "Anish Ghimire"
+author: "anish-ghimire"
 banner: "/img/ai-introduction/generative-ai-introduction-banner.png"
 bannerAlt: "An Introduction to Generative Artificial Intelligence (Gen AI)"
 ---

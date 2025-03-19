@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import AnishGhimire from "~/components/authors/AnishGhimire.vue";
 const runtimeConfig = useRuntimeConfig();
 const route = useRoute();
 
@@ -72,6 +73,13 @@ if (blog.value) {
     ],
   });
 }
+
+const authorComponent = computed(() => {
+  if (blog?.value?.author === "anish-ghimire") {
+    return AnishGhimire;
+  }
+  return AnishGhimire;
+});
 </script>
 
 <template>
@@ -103,71 +111,8 @@ if (blog.value) {
         />
       </div>
 
-      <ProseBlockquote>
-        {{ blog.description }}
-      </ProseBlockquote>
-
-      <ContentRenderer class="prose" :value="blog" />
-
-      <div class="space-y-4 border border-gray-100 p-4 shadow-md">
-        <div class="flex space-x-4 items-center">
-          <div class="w-12 h-12 overflow-hidden rounded-full flex-shrink-0">
-            <NuxtImg
-              class="w-full h-full object-cover"
-              alt="Anish Ghimire"
-              format="webp"
-              src="/anish-ghimire.jpeg"
-              placeholder
-              loading="lazy"
-            />
-          </div>
-          <div class="space-y-0.5">
-            <div class="flex items-center space-x-2">
-              <h1 class="text-sm font-semibold text-black">Anish Ghimire</h1>
-              <NuxtLink
-                to="https://github.com/anishghimire862"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Icon
-                  name="uil:github"
-                  class="text-gray-500 hover:text-blue-500"
-                />
-              </NuxtLink>
-              <NuxtLink
-                to="https://www.linkedin.com/in/anishghimire862"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Icon
-                  name="uil:linkedin"
-                  class="text-gray-500 hover:text-blue-500"
-                />
-              </NuxtLink>
-              <NuxtLink
-                to="https://x.com/anishghimire862"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Icon
-                  name="uil:twitter"
-                  class="text-gray-500 hover:text-blue-500"
-                />
-              </NuxtLink>
-            </div>
-            <h2 class="text-sm font-medium text-gray-500">
-              Full-stack software developer
-            </h2>
-          </div>
-        </div>
-
-        <p class="space-y-2 text-gray-500 text-sm">
-          I’m a full-stack software developer. I love solving problems,
-          improving user experiences, and sharing knowledge through blogs and
-          videos. Always eager to grow, I embrace challenges that help me learn
-          and build impactful, scalable solutions.
-        </p>
-      </div>
+      <ContentRenderer class="prose max-w-full" :value="blog" />
+      <component :is="authorComponent" />
     </div>
   </div>
 </template>
