@@ -21,6 +21,9 @@ export default defineNuxtConfig({
         highlight: false
       },
     },
+    renderer: {
+      anchorLinks: true
+    }
   },
   shadcn: {
     prefix: '',

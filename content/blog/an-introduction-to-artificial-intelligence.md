@@ -7,14 +7,14 @@ published: true
 posted: "March 15, 2025"
 author: "anish-ghimire"
 banner: "/img/ai-introduction/ai-introduction-banner.png"
-bannerAlt: "An Introduction to Artificial Intelligence (AI)"
+bannerAlt: "An Introduction to Artificial Intelligence (AI) Banner"
 ---
 
 **Artificial intelligence (AI)** refers to computer systems or machines designed to simulate human-like intelligence, enabling them to perform tasks such as reasoning, problem-solving, learning, adaptation, perception, and decision-making.
 
 AI systems use algorithms, data, and machine learning (a process of iterative improvement) to autonomously adapt, improve, and execute tasks. AI autonomy means an AI can operate, make decisions, and complete tasks with varying levels of human supervision .
 
-# Brief history of Artificial intelligence (AI)
+## Brief history of Artificial intelligence (AI)
 
 The [history of AI](https://www.ibm.com/think/topics/artificial-intelligence) dates back to the early 1900s. From the birth of AI, its maturation, the AI boom, the AI winter, AI agents, and up to the present day, we have come a long way.
 
@@ -22,7 +22,7 @@ AI development experienced rises and falls multiple times; dozens of companies f
 
 The current buzz and success surrounding AI can be attributed to advanced technologies, powerful processors and hardware like GPUs, improved algorithms, and the availability of large datasets.
 
-# Narrow AI vs. General AI
+## Narrow AI vs. General AI
 
 There are various [types of AI](https://www.simplilearn.com/tutorials/artificial-intelligence-tutorial/types-of-artificial-intelligence), but in this blog, we'll focus on two: Narrow AI and General AI
 
@@ -45,7 +45,7 @@ These systems excel at specific tasks but lack general intelligence.
 
 AGI remains hypothetical, and no real-world examples exist today . Current AI systems are all Narrow AI.
 
-# How does Artificial Intelligence (AI) work?
+## How does Artificial Intelligence (AI) work?
 
 AI works by simulating human intelligence in computer systems or machines. It makes use of algorithms, data, and computational power to simulate human-like intelligence, learn, solve problems, make decisions, recognize patterns, and more.
 
@@ -75,7 +75,7 @@ Inference is the stage where AI performs its intended task based on what it has 
 
 Now that we've discussed how AI works by using data, algorithms, neural networks, training, and inference, let's dive deeper into three key [branches of AI](https://www.aiacceleratorinstitute.com/what-are-the-top-7-branches-of-artificial-intelligence/) where these different components of an AI system come together: Machine Learning (ML), Natural Language Processing (NLP), and Neural Networks (NN).
 
-# Branches of Artificial Intelligence (AI)
+## Branches of Artificial Intelligence (AI)
 
 AI is a vast and multifaceted field, which is why the need for different branches of AI arises. Each branch focuses on solving specific types of challenges using particular techniques, tools, and approaches.
 
@@ -117,7 +117,7 @@ Some approaches to NLP include Supervised NLP, Unsupervised NLP, Natural Languag
 
 NLP is being utilized to automate various tasks, such as processing and analyzing large datasets, running chatbots, and more.
 
-# How Machine Learning (ML), Neural Networks (NNs), and Natural Language Processing (NLP) Work Together
+## How Machine Learning (ML), Neural Networks (NNs), and Natural Language Processing (NLP) Work Together
 
 Now that we've explored machine learning, neural networks, and natural language processing as key branches of AI, let's see how they all come together in a real-world application.
 

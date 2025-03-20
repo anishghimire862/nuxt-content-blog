@@ -8,7 +8,7 @@
       </h1>
 
       <div class="pb-4 space-y-2">
-        <ProseP class="text-justify">{{ blog.description }}</ProseP>
+        <ProseP>{{ blog.description }}</ProseP>
         <div class="text-xs text-gray-400">
           {{ blog.posted }}
         </div>

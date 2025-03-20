@@ -7,12 +7,21 @@ published: true
 posted: "March 20, 2025"
 author: "anish-ghimire"
 banner: "/img/ai-introduction/ai-agents-introduction-banner.png"
-bannerAlt: "AI Agents - Introduction and Example"
+bannerAlt: "AI Agents - Introduction and Example Banner"
 ---
 
-[Artificial Intelligence](https://sarvalekh.com/blog/an-introduction-to-artificial-intelligence) is growing at a very fast pace. The surge in transformer-based models like [GPT](https://openai.com/index/gpt-4/), [Qwen](https://qwen.readthedocs.io/en/latest/) and [Gemini](https://gemini.google.com/), along with open-source innovations, has accelerated advancements in generative AI much faster than in other branches of AI.
+[Artificial Intelligence](https://sarvalekh.com/blog/an-introduction-to-artificial-intelligence) is growing at a very fast pace. The surge in transformer-based models like [GPT](https://openai.com/index/gpt-4/), [Qwen](https://qwen.readthedocs.io/en/latest/) and [Gemini](https://gemini.google.com/), along with open-source innovations, has accelerated advancements in generative AI much faster than in other branches of AI. AI Agents have played a vital role in the growth and adoption of AI.
 
-# What is an AI Agent?
+In this blog, we'll discuss the following topics:
+
+- <a href="#what-is-an-ai-agent" target="_self">AI Agent Introduction</a>
+- <a href="#types-of-ai-agents" target="_self">Types of AI Agents</a>
+- <a href="#connection-of-ai-agents-with-generative-ai-gen-ai" target="_self">Connection of AI Agents with Generative AI</a>
+- <a href="#why-are-ai-agents-required" target="_self">Why are AI Agents required?</a>
+- <a href="#an-example-of-ai-agent-in-customer-support" target="_self">An Example of AI Agent In Customer Support</a>
+- <a href="#customer-support-ai-agent-implementation-with-nodejs-and-ollama" target="_self">Customer Support AI Agent Implementation with NodeJS and Ollama</a>
+
+## What is an AI Agent?
 
 An Artificial Intelligence (AI) [Agent](https://github.com/resources/articles/ai/what-are-ai-agents) is a software program that can perceive its environment, make decisions, and autonomously perform tasks to achieve predefined or dynamic goals.
 
@@ -38,7 +47,7 @@ Learning agents learn from their environment and improve their performance throu
 
 Recommendation systems, such as those of Netflix and YouTube, are examples of learning agents. They learn from user behavior and adapt to changes over time.
 
-# Connection of AI Agents with Generative AI (Gen AI)
+## Connection of AI Agents with Generative AI (Gen AI)
 
 Before diving deeper into agentic AI or AI agents, let's first understand their connection with [Generative AI](https://sarvalekh.com/blog/an-introduction-to-generative-ai) (Gen AI).
 
@@ -46,7 +55,7 @@ Generative AI primarily refers to AI models that generate new content based on a
 
 AI agents leverage Gen AI models for intelligence and utilize external tools such as APIs, databases, and other automation systems to complete tasks.
 
-# Why are AI Agents required?
+## Why are AI Agents required?
 
 AI agents help bridge the gap between what an LLM has been trained on and the domain-specific knowledge required to solve a particular type of problem.
 
@@ -55,7 +64,7 @@ AI agents help bridge the gap between what an LLM has been trained on and the do
 
 AI agents are required when the system needs to be adaptable, configurable, contextually aware, capable of accessing domain-specific knowledge, and able to perform or automate certain tasks.
 
-# An Example of AI Agent In Customer Support
+## An Example of AI Agent In Customer Support
 
 Consider a customer support AI Agent with its own knowledge base. For queries, the agent first checks its knowledge base. If relevant resources are found, the information is passed on to the LLM (like Qwen or Gemini) to generate a response.
 
@@ -63,7 +72,7 @@ In cases where there is no relevant information in the knowledge base, the AI ag
 
 In the above example, the AI agent is making the decision to use different methods (its own knowledge base or LLM) based on the information it has, which is a key characteristic of an AI agent - it takes actions autonomously to complete a task.
 
-# Customer Support AI Agent Implementation with NodeJS and Ollama
+## Customer Support AI Agent Implementation with NodeJS and Ollama
 
 Theory can be boring, so without wasting much time, let's jump straight into a demo project.
 
