@@ -5,9 +5,10 @@ slug: "ai-agents-introduction-and-implementation"
 description: "In this blog, we'll discuss AI Agents and implement a Customer Support AI Agent with a custom knowledge base using Ollama and NodeJS."
 published: true
 posted: "March 20, 2025"
-author: "anish-ghimire"
+authorSlug: "anish-ghimire"
 banner: "/img/ai-introduction/ai-agents-introduction-banner.png"
 bannerAlt: "AI Agents - Introduction and Example Banner"
+tags: ["ai"]
 ---
 
 [Artificial Intelligence](https://sarvalekh.com/blog/an-introduction-to-artificial-intelligence) is growing at a very fast pace. The surge in transformer-based models like [GPT](https://openai.com/index/gpt-4/), [Qwen](https://qwen.readthedocs.io/en/latest/) and [Gemini](https://gemini.google.com/), along with open-source innovations, has accelerated advancements in generative AI much faster than in other branches of AI. AI Agents have played a vital role in the growth and adoption of AI.

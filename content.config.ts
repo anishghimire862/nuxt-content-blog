@@ -12,11 +12,12 @@ export default defineContentConfig({
           title: z.string(),
           slug: z.string(),
           description: z.string(),
-          author: z.string(),
+          authorSlug: z.string(),
           published: z.boolean(),
           posted: z.string(),
           banner: z.string(),
-          bannerAlt: z.string()
+          bannerAlt: z.string(),
+          tags: z.array(z.string()),
         })
       }),
     ),

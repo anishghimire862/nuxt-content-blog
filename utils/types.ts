@@ -2,11 +2,12 @@ export interface Blog {
   title: string;
   slug: string;
   description: string;
-  author: string;
+  authorSlug: string;
   posted: string;
   published: boolean;
   banner: string;
-  bannerAlt: string
+  bannerAlt: string;
+  tags: string[];
 }
 
 declare module '#app' {

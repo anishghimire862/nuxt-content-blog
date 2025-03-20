@@ -5,9 +5,10 @@ slug: "an-introduction-to-artificial-intelligence"
 description: "In this blog, we will discuss about Artificial Intelligence (AI), explore its history, types, and branches, and examine how different branches of AI work together through a real-world example."
 published: true
 posted: "March 15, 2025"
-author: "anish-ghimire"
+authorSlug: "anish-ghimire"
 banner: "/img/ai-introduction/ai-introduction-banner.png"
 bannerAlt: "An Introduction to Artificial Intelligence (AI) Banner"
+tags: ["ai"]
 ---
 
 **Artificial intelligence (AI)** refers to computer systems or machines designed to simulate human-like intelligence, enabling them to perform tasks such as reasoning, problem-solving, learning, adaptation, perception, and decision-making.

@@ -1,3 +1,3 @@
 <template>
-  <p class="text-base text-gray-600"><slot /></p>
+  <p class="text-lg text-gray-700 leading-relaxed mb-4"><slot /></p>
 </template>
