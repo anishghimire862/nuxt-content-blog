@@ -8,6 +8,7 @@ export interface Blog {
   banner: string;
   bannerAlt: string;
   tags: string[];
+  featured: boolean;
 }
 
 declare module '#app' {

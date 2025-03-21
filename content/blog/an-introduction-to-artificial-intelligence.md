@@ -9,6 +9,7 @@ authorSlug: "anish-ghimire"
 banner: "/img/ai-introduction/ai-introduction-banner.png"
 bannerAlt: "An Introduction to Artificial Intelligence (AI) Banner"
 tags: ["ai"]
+featured: false
 ---
 
 **Artificial intelligence (AI)** refers to computer systems or machines designed to simulate human-like intelligence, enabling them to perform tasks such as reasoning, problem-solving, learning, adaptation, perception, and decision-making.

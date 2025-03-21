@@ -9,6 +9,7 @@ authorSlug: "anish-ghimire"
 banner: "/img/ai-introduction/generative-ai-introduction-banner.png"
 bannerAlt: "An Introduction to Generative Artificial Intelligence (Gen AI) Banner"
 tags: ["ai"]
+featured: true
 ---
 
 In our [previous blog](https://sarvalekh.com/blog/an-introduction-to-artificial-intelligence), we discussed the introduction to Artificial Intelligence, AI’s brief history, types, branches, and examined how the different branches of AI work together through a real-world example of virtual assistants like Siri and Alexa.

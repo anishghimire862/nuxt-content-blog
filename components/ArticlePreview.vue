@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="blog"
-    class="p-4 group hover:bg-gray-50 transition-colors shadow-sm hover:shadow-md rounded-lg"
+    class="p-4 group hover:bg-gray-50 transition-colors shadow-sm hover:shadow-md rounded-lg space-y-4"
   >
     <div class="flex flex-wrap gap-2 mb-2">
       <span
@@ -15,18 +15,19 @@
 
     <NuxtLink :to="`/blog/${blog.slug}`" class="space-y-2 block">
       <h1
-        class="transition-colors group-hover:text-blue-500 text-2xl font-bold text-gray-800 leading-snug"
+        class="transition-colors group-hover:text-blue-500 text-2xl font-bold text-gray-800 leading-relaxed"
       >
         {{ blog.title }}
       </h1>
 
-      <div class="pb-4 space-y-2">
-        <ProseP>{{ blog.description }}</ProseP>
-        <div class="text-xs text-gray-500">
-          {{ blog.posted }}
-        </div>
-      </div>
+      <ProseP>{{ blog.description }}</ProseP>
     </NuxtLink>
+    <div class="flex items-center space-x-2 justify-between">
+      <Author :author-slug="`anish-ghimire`" />
+      <div class="text-xs text-gray-500">
+        {{ blog.posted }}
+      </div>
+    </div>
   </div>
 </template>
 

@@ -18,6 +18,7 @@ export default defineContentConfig({
           banner: z.string(),
           bannerAlt: z.string(),
           tags: z.array(z.string()),
+          featured: z.boolean(),
         })
       }),
     ),
