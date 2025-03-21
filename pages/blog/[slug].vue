@@ -23,11 +23,11 @@ if (blog.value) {
       { property: "og:description", content: blog.value.description },
       {
         property: "og:image",
-        content: blog.value.banner,
+        content: `${runtimeConfig.public.domain}${blog.value.banner}`,
       },
       {
         property: "og:url",
-        content: `https://sarvalekh.com/blog/${blog.value.slug}`,
+        content: `${runtimeConfig.public.domain}/blog/${blog.value.slug}`,
       },
       { property: "og:type", content: "article" },
 
@@ -36,7 +36,7 @@ if (blog.value) {
       { name: "twitter:description", content: blog.value.description },
       {
         name: "twitter:image",
-        content: blog.value.banner,
+        content: `${runtimeConfig.public.domain}${blog.value.banner}`,
       },
     ],
     link: [
@@ -58,7 +58,7 @@ if (blog.value) {
           "@type": "BlogPosting",
           headline: blog.value.title,
           description: blog.value.description,
-          image: blog.value.banner,
+          image: `${runtimeConfig.public.domain}${blog.value.banner}`,
           url: `${runtimeConfig.public.domain}/blog/${blog.value.slug}`,
           author: {
             "@type": "Person",

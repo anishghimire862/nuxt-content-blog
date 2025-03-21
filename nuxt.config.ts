@@ -59,14 +59,14 @@ export default defineNuxtConfig({
 
         { property: 'og:title', content: 'Technical Blogs on AI, Software Development & More' },
         { property: 'og:description', content: 'Explore blogs on AI, software development, tutorials, and industry insights. Learn from personal experiences, tips, and expert advice for tech enthusiasts.' },
-        { property: 'og:image', content: '/sarvalekh.png' },
+        { property: 'og:image', content: 'https://sarvalekh.com/sarvalekh.png' },
         { property: 'og:url', content: 'https://sarvalekh.com' },
         { property: 'og:type', content: 'website' },
 
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'Technical Blogs on AI, Software Development & More' },
         { name: 'twitter:description', content: 'Explore blogs on AI, software development, tutorials, and industry insights. Learn from personal experiences, tips, and expert advice for tech enthusiasts.' },
-        { name: 'twitter:image', content: '/sarvalekh.png' }
+        { name: 'twitter:image', content: 'https://sarvalekh.com/sarvalekh.png' }
 
       ],
       link: [
