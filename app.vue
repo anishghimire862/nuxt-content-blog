@@ -1,12 +1,10 @@
 <template>
   <div>
     <div
-      class="w-full shadow-lg shadow-gray-200 flex justify-between p-2 items-center"
+      class="w-full shadow-lg shadow-gray-200 flex justify-between p-4 items-center bg-white"
     >
       <NuxtLink to="/">
-        <span
-          class="text-xl subpixel-antialiased font-extrabold tracking-wide text-blue-500"
-        >
+        <span class="text-2xl font-bold tracking-wide text-blue-600">
           Sarva Lekh
         </span>
       </NuxtLink>
@@ -14,9 +12,9 @@
         <NuxtLink to="/">
           <Button
             variant="ghost"
-            class="text-gray-600 transition-all duration-300 ease-in-out hover:font-bold hover:text-blue-500"
+            class="text-gray-700 transition-all duration-300 ease-in-out hover:font-bold hover:text-blue-600 text-md"
             :class="{
-              'underline decoration-4 decoration-blue-500':
+              'underline decoration-4 decoration-blue-600':
                 currentRoute === '/',
             }"
           >
