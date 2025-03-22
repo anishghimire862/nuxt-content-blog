@@ -1,9 +1,11 @@
 import RSS from 'rss'
 
+const runtimeConfig = useRuntimeConfig();
+
 const feed = new RSS({
     title: 'Sarva Lekh',
-    site_url: 'https://sarvalekh.com',
-    feed_url: `https://sarvalekh.com/rss.xml`,
+    site_url: runtimeConfig.public.domain,
+    feed_url: `${runtimeConfig.public.domain}/rss.xml`,
 })
 
 export default defineEventHandler(async (event) => {
@@ -12,7 +14,7 @@ export default defineEventHandler(async (event) => {
     for (const doc of docs) {
         feed.item({
             title: doc.title ?? '-',
-            url: `https://sarvalekh.com${doc.path}`,
+            url: `${runtimeConfig.public.domain}${doc.path}`,
             date: doc.posted,
             description: doc.description,
         })
