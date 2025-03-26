@@ -23,7 +23,7 @@
       <ProseP>{{ blog.description }}</ProseP>
     </NuxtLink>
     <div class="flex items-center space-x-2 justify-between">
-      <Author :author-slug="`anish-ghimire`" />
+      <!-- <Author :author-slug="`anish-ghimire`" /> -->
       <div class="text-xs text-gray-500">
         {{ blog.posted }}
       </div>
@@ -32,5 +32,5 @@
 </template>
 
 <script lang="ts" setup>
-const props = defineProps<{ blog: Blog }>();
+const props = defineProps<{ blog: Blog }>()
 </script>

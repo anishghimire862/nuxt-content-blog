@@ -1,14 +1,14 @@
 ---
 id: 4
-title: "Retrieval-Augmented Generation (RAG) - Introduction (Part I)"
-slug: "retrieval-augmented-generation-introduction-part-i"
+title: 'Retrieval-Augmented Generation (RAG) - Introduction (Part I)'
+slug: 'retrieval-augmented-generation-introduction-part-i'
 description: "In this blog, we'll discuss Retrieval-Augmented Generation (RAG), including examples, how it works, its pipelines, tokens and context window, and its core components."
 published: true
-posted: "March 21, 2025"
-authorSlug: "anish-ghimire"
-banner: "/img/rag/rag-introduction-banner.png"
-bannerAlt: "Retrieval-Augmented Generation (RAG) - Introduction and Implementation Banner"
-tags: ["ai", "rag"]
+posted: 'March 21, 2025'
+authorSlug: 'anish-ghimire'
+banner: '/img/rag/rag-introduction-banner.png'
+bannerAlt: 'Retrieval-Augmented Generation (RAG) - Introduction and Implementation Banner'
+tags: ['ai', 'rag']
 featured: true
 ---
 
@@ -111,4 +111,4 @@ ChromaDB and FAISS are some examples of vector databases.
 
 [Chunking strategies](https://www.pinecone.io/learn/chunking-strategies/) are methods of breaking down large datasets or knowledge bases into smaller, more manageable pieces. Chunking is a crucial step in RAG and enhances the efficiency of LLMs.
 
-That's it! A lot of theory about RAG. Let's take a break, and we'll be back in another blog with a RAG implementation using Ollama, ChromaDB, and NodeJS.
+That's it! A lot of theory about RAG. Let's take a break, and we'll be back in another blog with a RAG implementation using [Ollama](https://ollama.com/), [NodeJS](https://nodejs.org/en), and [LanceDB](https://lancedb.com/).
