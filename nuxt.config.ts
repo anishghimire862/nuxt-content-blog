@@ -75,6 +75,12 @@ export default defineNuxtConfig({
           rel: 'stylesheet',
           href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'
         },
+        {
+          rel: 'alternate',
+          type: 'application/rss+xml',
+          href: '/rss.xml',
+          title: 'RSS Feed'
+        },
       ],
       htmlAttrs: {
         lang: 'en',
