@@ -9,7 +9,7 @@ authorSlug: 'anish-ghimire'
 banner: '/img/rag/rag-introduction-banner.png'
 bannerAlt: 'Retrieval-Augmented Generation (RAG) - Introduction and Implementation Banner'
 tags: ['ai', 'rag']
-featured: true
+featured: false
 ---
 
 In our [previous blog](https://sarvalekh.com/blog/ai-agents-introduction-and-implementation), we briefly discussed AI agents and implemented an intelligent AI agent that utilized a knowledge base to assist users with customer support.

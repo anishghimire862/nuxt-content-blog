@@ -49,36 +49,6 @@
       </div>
     </section>
 
-    <!-- <div
-      class="w-full shadow-lg shadow-gray-200 flex justify-between p-4 items-center bg-white relative"
-    >
-      <NuxtLink to="/" class="flex items-center space-x-2">
-        <span class="text-2xl font-semibold text-blue-600"> Sarva Lekh </span>
-      </NuxtLink>
-      <div class="flex space-x-4">
-        <NuxtLink
-          v-for="item in navItems"
-          :key="item.name"
-          :to="item.to"
-          class="relative"
-        >
-          <Button
-            variant="ghost"
-            class="text-gray-700 transition-all duration-300 ease-in-out hover:text-blue-600"
-            :class="{
-              'font-bold text-blue-600': isActive(item.to),
-            }"
-          >
-            {{ item.name }}
-          </Button>
-          <div
-            v-if="isActive(item.to)"
-            class="absolute bottom-0 left-0 w-full h-1 bg-blue-600"
-          ></div>
-        </NuxtLink>
-      </div>
-    </div> -->
-
     <NuxtLoadingIndicator />
     <NuxtPage />
 
@@ -87,45 +57,45 @@
 </template>
 
 <script setup lang="ts">
-import { Menu, X } from "lucide-vue-next";
-import { Button } from "@/components/ui/button";
+import { Menu, X } from 'lucide-vue-next'
+import { Button } from '@/components/ui/button'
 
-const runtimeConfig = useRuntimeConfig();
-const route = useRoute();
-const { gtag, initialize } = useGtag();
+const runtimeConfig = useRuntimeConfig()
+const route = useRoute()
+const { gtag, initialize } = useGtag()
 
-const currentRoute = ref(route.path);
-const isOpen = ref(false);
+const currentRoute = ref(route.path)
+const isOpen = ref(false)
 
 watchEffect(() => {
-  currentRoute.value = route.path ?? "/";
-});
+  currentRoute.value = route.path ?? '/'
+})
 
 useHead({
-  titleTemplate: `%s | ${runtimeConfig.public.name ?? "Sarva Lekh"}`,
-});
+  titleTemplate: `%s | ${runtimeConfig.public.name ?? 'Sarva Lekh'}`,
+})
 
 onMounted(() => {
-  if (localStorage.getItem("cookie-consent")) {
-    initialize();
-    gtag("consent", "update", {
-      ad_user_data: "granted",
-      ad_personalization: "granted",
-      ad_storage: "granted",
-      analytics_storage: "granted",
-    });
+  if (localStorage.getItem('cookie-consent')) {
+    initialize()
+    gtag('consent', 'update', {
+      ad_user_data: 'granted',
+      ad_personalization: 'granted',
+      ad_storage: 'granted',
+      analytics_storage: 'granted',
+    })
   }
-});
+})
 
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Blogs", href: "/blog" },
-];
+  { name: 'Home', href: '/' },
+  { name: 'Blogs', href: '/blog' },
+]
 
 const isActive = (path: string) => {
-  if (path === "/blog") {
-    return currentRoute.value.startsWith("/blog");
+  if (path === '/blog') {
+    return currentRoute.value.startsWith('/blog')
   }
-  return currentRoute.value === path;
-};
+  return currentRoute.value === path
+}
 </script>
