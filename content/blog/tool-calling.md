@@ -20,7 +20,7 @@ In the blog we will discuss:
 
 ## Tool Calling Introduction
 
-Tool calling extends the capabilities of AI agents by enabling models to interact with external data sources such as databases, APIs, or scripts.
+Tool calling extends the capabilities of [AI agents](https://sarvalekh.com/blog/ai-agents-introduction-and-implementation) by enabling models to interact with external data sources such as databases, APIs, or scripts.
 
 In this blog, we'll examine how AI agents can go beyond just retrieving knowledge to taking actions.
 
@@ -38,7 +38,7 @@ The external tool, such as an API, database query, or script, processes the requ
 
 While the applications of tool calling are vast, ranging from a simple web search to performing secure transactions, for demonstration purposes, we will examine a tool that dynamically creates and lists GitHub issues for a project.
 
-To keep it simple, we'll be using Ollama, NodeJS, and the GitHub API to set up a demo project for tool calling implementation.
+To keep it simple, we'll be using [Ollama](https://ollama.com), [NodeJS](https://nodejs.org/en) and the [GitHub API](https://docs.github.com/en/rest?apiVersion=2022-11-28) to set up a demo project for tool calling implementation.
 
 We’ll set up a NodeJS project in the following structure:
 
