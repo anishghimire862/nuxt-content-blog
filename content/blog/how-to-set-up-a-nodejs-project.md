@@ -6,29 +6,39 @@ description: 'In this blog, we will go through the process of setting up a Node.
 published: true
 posted: 'April 4, 2025'
 authorSlug: 'anish-ghimire'
-banner: '/img/nodejs-introduction/'
-bannerAlt: 'Node.js - Introduction Banner'
+banner: '/img/setup-nodejs/nodejs-dev-server.jpeg'
+bannerAlt: 'Run Node.js Development Server Using Nodemon'
 tags: ['nodejs']
 featured: false
 ---
 
-In this blog, we'll discuss the following concepts related to setting up a Node.js project:
+In this blog, we'll discuss the following concepts related to setting up a [Node.js](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs#introduction-to-nodejs) project:
 
-- <a href="#" target="_self">Introduction to Node.js</a>
+- <a href="#introduction-to-nodejs" target="_self">Introduction to Node.js</a>
+- <a href="#installing-nodejs" target="_self">Installing Node.js</a>
+- <a href="#initializing-the-nodejs-project" target="_self">Initializing the Node.js Project</a>
+- <a href="#installing-dependencies" target="_self">Installing Dependencies</a>
+- <a href="#creating-a-project-structure" target="_self">Creating a Project Structure</a>
+- <a href="#configuring-environment-variable" target="_self">Configuring Environment Variable</a>
+- <a href="#creating-a-node-server" target="_self">Creating a Node Server</a>
+- <a href="#adding-scripts-to-packagejson" target="_self">Adding Scripts to package.json</a>
+- <a href="#running-node-application" target="_self">Running Node Application</a>
+- <a href="#set-up-version-control-git" target="_self">Set Up Version Control (Git)</a>
+- <a href="#purpose-of-gitignore-in-git" target="_self">Purpose of .gitignore in Git</a>
 
 ## Introduction to Node.js
 
-[Node.js](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs#introduction-to-nodejs) is a [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) runtime environment built on the [V8](https://v8.dev/) JavaScript engine. The V8 engine is responsible for compiling JS code to machine code, enabling the execution of JS code outside the browser.
+Node is a [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) runtime environment built on the [V8](https://v8.dev/) JavaScript engine. The V8 engine is responsible for compiling JS code to machine code, enabling the execution of JS code outside the browser.
 
-Additionally, Node.js provides essential libraries for building server-side applications (such as libuv, file system access, networking, etc.).
+Additionally, Node.js provides essential libraries for building server-side applications (such as [libuv](https://libuv.org/), file system access, networking, etc.).
 
-## Install Node.js
+## Installing Node.js
 
-Go to the Node.js [download](https://nodejs.org/en/download) page to download and install Node.js on your device. It provides a UI that lets you select the Node.js version you want to download, the platform on which you want to install the service, as well as the version (such as [NVM](https://github.com/nvm-sh/nvm)) and package manager (such as [NPM](https://www.npmjs.com/), [PNPM](https://pnpm.io/)).
+Go to the Node [download](https://nodejs.org/en/download) page to download and install Node on your device. It provides a UI that lets you select the Node version you want to download, the platform on which you want to install the service, as well as the version (such as [NVM](https://github.com/nvm-sh/nvm)) and package manager (such as [NPM](https://www.npmjs.com/), [PNPM](https://pnpm.io/)).
 
-## Initialize a Node.js Project
+## Initializing the Node.js Project
 
-Navigate to the directory where you want to create a Node.js project and run the following commands:
+Navigate to the directory where you want to create a Node project and run the following commands:
 
 ```BASH
 cd Projects/
@@ -40,7 +50,7 @@ We've navigated to the `Projects` directory, created a new folder called `node-s
 
 To initialize the project, run `npm init` or `npm init -y`. Running the init command creates a [package.json](https://phoenixnap.com/kb/package-json) file, which is used to manage project dependencies, scripts, and other metadata.
 
-## Install Dependencies
+## Installing Dependencies
 
 To install dependencies, run:
 
@@ -60,7 +70,7 @@ Nodemon is a dependency used during the development process and is not required 
 npm install nodemon --save-dev
 ```
 
-## Create Project Structure
+## Creating a Project Structure
 
 While the structure of a project completely depends on the developer and the team, a good project structure helps with the project's maintainability. So, let's create a very basic project structure for our new application.
 
@@ -75,7 +85,7 @@ node-setup/
 └── node_modules
 ```
 
-## Configure Environment Variable
+## Configuring Environment Variable
 
 We will create a `.env` file and define configurations such as PORT and HOST there in our case.
 
@@ -84,13 +94,13 @@ HOST=localhost
 PORT=3344
 ```
 
-We will use dotenv to load environment variables from the `.env` file into `process.env`. The env file contains sensitive data such as tokens, API keys, and secrets, as well as configuration details such as the PORT number.
+We will use `dotenv` to load environment variables from the `.env` file into `process.env`. The env file contains sensitive data such as tokens, API keys, and secrets, as well as configuration details such as the PORT number.
 
-Therefore, the .env file should not be pushed to version control providers and should be added to .gitignore as soon as possible.
+Therefore, the `.env` file should not be pushed to version control providers and should be added to `.gitignore` as soon as possible.
 
-Reading sensitive data from the .env file and avoiding pushing tokens and keys are the first steps toward securing an application.
+Reading sensitive data from the `.env` file and avoiding pushing tokens and keys are the first steps toward securing an application.
 
-## Create a Node Server
+## Creating a Node Server
 
 As an example, we'll create a very basic Node server using the [http](https://nodejs.org/api/http.html) module and run the server on a specific port.
 
@@ -112,9 +122,9 @@ server.listen(port, hostname, () => {
 })
 ```
 
-In the above code snippet, we import the `HTTP` module and create a server using `createServer()` that listens for HTTP requests on the port specified as an environment variable.
+In the above code snippet, we import the `http` module and create a server using `createServer()` that listens for HTTP requests on the port specified as an environment variable.
 
-## Add Script to package.json
+## Adding Scripts to package.json
 
 At this point, if you try to run `nodemon src/index.js` to start the application, you'll encounter an error: `command not found: nodemon.`
 
@@ -144,13 +154,17 @@ npm run dev
 
 Once your development server is up and running, you can visit `http://localhost:{PORT}` to see your app in action.
 
-## Setup Version Control (GIT)
+## Set Up Version Control (Git)
 
-We will not discuss version control and Git in depth here. Instead, we'll simply use GitHub to store the code of the application we just created in this blog.
+We will not discuss [Version Control](https://about.gitlab.com/topics/version-control/) and [Git](https://git-scm.com/) in depth here. Instead, we'll simply use GitHub to store the code of the application we just created in this blog.
 
 Head over to GitHub and create a new repository.
 
+![Create New GitHub Repository](/img/setup-nodejs/github-create-repo.jpeg)
+
 Once the repository is created, navigate to your project directory and run the commands provided by GitHub.
+
+![GitHub New Repository Instructions](/img/setup-nodejs/github-repo-created.jpeg)
 
 ```BASH
 git init
@@ -158,16 +172,18 @@ git init
 git remote add origin git@github.com:anishghimire862/node-setup.git
 ```
 
-### Purpose of .gitignore
+![Initialize Git Repository](/img/setup-nodejs/git-init-command.jpeg)
 
-There are certain files that we don't want to push to the version control provider. An example of such files is the `.env` file, which stores sensitive information such as keys, tokens, secrets, and configuration. The `.gitignore` file is a special file used in Git to prevent tracking of files and directories listed within it.
+### Purpose of .gitignore in Git
+
+There are certain files that we don't want to push to the version control provider. An example of such files is the `.env` file, which stores sensitive information such as keys, tokens, secrets, and configuration. The [.gitignore](https://www.toptal.com/developers/gitignore) file is a special file used in Git to prevent tracking of files and directories listed within it.
 
 ```JS
 node_modules/
 .env
 ```
 
-In our case, we'll create a new `.gitignore` file and add `.env` and `node_modules/` to it since we don't want these files to be tracked by version control.
+In our case, we'll create a `.gitignore` file and add `.env` and `node_modules/` to it since we don't want these files to be tracked by version control.
 
 Since this is a new repository, we first need to initialize an empty Git repository locally and add a remote connection to link it with the GitHub repository
 
@@ -185,4 +201,4 @@ Make sure not to run `git add .` if you don't want to stage all the changed file
 
 Before running `git add` or `git commit`, it's better to run the `git status` command to view the list of changed, staged, and unstaged files
 
-With this, we have come to the end of the blog. We now know how to set up a Node.js project and use version control to keep track of changes.
+With this, we have come to the end of the blog. We now know how to set up a Node.js project and use version control to keep track of changes. You can find the source code of the project we created for this blog [here](https://github.com/anishghimire862/node-setup).
