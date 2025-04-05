@@ -25,12 +25,14 @@
     <div class="flex items-center space-x-2 justify-between">
       <!-- <Author :author-slug="`anish-ghimire`" /> -->
       <div class="text-xs text-gray-500">
-        {{ blog.posted }}
+        {{ formatDate(new Date(blog.posted), 'MMM D, YYYY') }}
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { formatDate } from '@vueuse/core'
+
 const props = defineProps<{ blog: Blog }>()
 </script>

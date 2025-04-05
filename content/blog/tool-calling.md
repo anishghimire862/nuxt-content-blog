@@ -4,7 +4,7 @@ title: 'GitHub Assistant Integration with Tool Calling'
 slug: 'github-assistant-integration-with-tool-calling'
 description: In this blog, we'll introduce Tool Calling, briefly discuss how it works, and work on integrating GitHub Assistant using NodeJS and Ollama.
 published: true
-posted: 'March 31, 2025'
+posted: 2025-03-31
 authorSlug: 'anish-ghimire'
 banner: '/img/tool-calling/github-assistant-list-issues.jpeg'
 bannerAlt: 'Tool Calling - Banner'

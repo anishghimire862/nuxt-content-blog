@@ -4,7 +4,7 @@ title: 'Retrieval-Augmented Generation (RAG) - Implementation (Part II)'
 slug: 'retrieval-augmented-generation-implementatoon-part-ii'
 description: 'In this blog, we will implement a Retrieval-Augmented Generation (RAG) system using Ollama, NodeJS, and LanceDB.'
 published: true
-posted: 'March 26, 2025'
+posted: 2025-03-26
 authorSlug: 'anish-ghimire'
 banner: '/img/rag/rag-implementation-banner.png'
 bannerAlt: 'Retrieval-Augmented Generation (RAG) - Implementation Banner'

@@ -3,7 +3,7 @@ export interface Blog {
   slug: string;
   description: string;
   authorSlug: string;
-  posted: string;
+  posted: Date;
   published: boolean;
   banner: string;
   bannerAlt: string;

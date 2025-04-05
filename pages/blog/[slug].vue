@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { formatDate } from '@vueuse/core'
+
 const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
 
@@ -6,6 +8,7 @@ const { slug } = route.params
 const { data: blog, error } = await useAsyncData<Blog>('blog', () =>
   queryCollection('blog').where('slug', '=', slug).first()
 )
+
 if (error.value) {
   console.error('Error fetching blogs:', error.value)
 }
@@ -115,11 +118,9 @@ if (blog.value) {
       <div class="flex items-center space-x-2 justify-between">
         <Author :author-slug="`anish-ghimire`" />
         <div class="text-xs text-gray-500">
-          {{ blog.posted }}
+          {{ formatDate(new Date(blog.posted), 'MMM D, YYYY') }}
         </div>
       </div>
-
-      <!-- <Author :author-slug="blog.authorSlug" /> -->
     </div>
   </div>
 </template>

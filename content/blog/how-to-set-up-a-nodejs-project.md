@@ -4,7 +4,7 @@ title: 'How to set up a Node.js project'
 slug: 'how-to-set-up-a-nodejs-project'
 description: 'In this blog, we will go through the process of setting up a Node.js project.'
 published: true
-posted: 'April 4, 2025'
+posted: 2025-04-04
 authorSlug: 'anish-ghimire'
 banner: '/img/setup-nodejs/nodejs-dev-server.jpeg'
 bannerAlt: 'Run Node.js Development Server Using Nodemon'

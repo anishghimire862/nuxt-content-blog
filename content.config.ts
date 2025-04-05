@@ -14,7 +14,7 @@ export default defineContentConfig({
           description: z.string(),
           authorSlug: z.string(),
           published: z.boolean(),
-          posted: z.string(),
+          posted: z.date(),
           banner: z.string(),
           bannerAlt: z.string(),
           tags: z.array(z.string()),

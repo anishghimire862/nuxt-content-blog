@@ -4,7 +4,7 @@ title: 'Retrieval-Augmented Generation (RAG) - Introduction (Part I)'
 slug: 'retrieval-augmented-generation-introduction-part-i'
 description: "In this blog, we'll discuss Retrieval-Augmented Generation (RAG), including examples, how it works, its pipelines, tokens and context window, and its core components."
 published: true
-posted: 'March 21, 2025'
+posted: 2025-03-21
 authorSlug: 'anish-ghimire'
 banner: '/img/rag/rag-introduction-banner.png'
 bannerAlt: 'Retrieval-Augmented Generation (RAG) - Introduction and Implementation Banner'

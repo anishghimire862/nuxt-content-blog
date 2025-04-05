@@ -1,14 +1,14 @@
 ---
 id: 3
-title: "AI Agents - Introduction and Customer Support AI Agent Example"
-slug: "ai-agents-introduction-and-implementation"
+title: 'AI Agents - Introduction and Customer Support AI Agent Example'
+slug: 'ai-agents-introduction-and-implementation'
 description: "In this blog, we'll discuss AI Agents and implement a Customer Support AI Agent with a custom knowledge base using Ollama and NodeJS."
 published: true
-posted: "March 20, 2025"
-authorSlug: "anish-ghimire"
-banner: "/img/ai-introduction/ai-agents-introduction-banner.png"
-bannerAlt: "AI Agents - Introduction and Example Banner"
-tags: ["ai"]
+posted: 2025-03-20
+authorSlug: 'anish-ghimire'
+banner: '/img/ai-introduction/ai-agents-introduction-banner.png'
+bannerAlt: 'AI Agents - Introduction and Example Banner'
+tags: ['ai']
 featured: false
 ---
 
@@ -99,21 +99,21 @@ The knowledge base can come in various formats, such as a site's FAQs, databases
 We first read the content of the knowledge base from the `knowledge.json` file. The knowledge base contains domain-specific information that is generally not included in the training data of an LLM or may not be available on the internet.
 
 ```javascript
-let knowledgeBase = {};
-fs.readFile("knowledge.json", "utf8", (err, data) => {
+let knowledgeBase = {}
+fs.readFile('knowledge.json', 'utf8', (err, data) => {
   if (err) {
-    console.error("Error reading knowledge base:", err);
+    console.error('Error reading knowledge base:', err)
   } else {
-    knowledgeBase = JSON.parse(data);
+    knowledgeBase = JSON.parse(data)
   }
-});
+})
 ```
 
 Once the knowledge base is loaded, we handle user queries and interact with the Ollama API.
 
 ```javascript
 async function runQuery(query) {
-  const knowledgeContent = JSON.stringify(knowledgeBase);
+  const knowledgeContent = JSON.stringify(knowledgeBase)
   const prompt = `
   You are an intelligent customer support agent. Your goal is to assist users by providing accurate, clear, and concise answers based on the knowledge base you have access to.
 
@@ -125,20 +125,20 @@ async function runQuery(query) {
   The user has asked: "${query}"
 
   Please provide a helpful response.
-  `;
+  `
 
   try {
-    const response = await axios.post("http://localhost:11434/api/generate", {
-      model: "qwen2.5",
+    const response = await axios.post('http://localhost:11434/api/generate', {
+      model: 'qwen2.5',
       prompt: prompt,
       temperature: 0.7,
       stream: false,
-    });
+    })
 
-    return response.data?.response || "Answer not found.";
+    return response.data?.response || 'Answer not found.'
   } catch (error) {
-    console.error("Error querying Ollama:", error);
-    return "Sorry, there was an error processing your request.";
+    console.error('Error querying Ollama:', error)
+    return 'Sorry, there was an error processing your request.'
   }
 }
 ```
@@ -150,12 +150,12 @@ Once the model completes processing the query and a response is generated, we re
 We’ve come to the final part of the code, where we will set up the `(/query)` API endpoint that listens for POST requests, processes the user's query, and then returns the response from the LLM to the user.
 
 ```javascript
-app.post("/query", async (req, res) => {
-  const query = req.body.query.trim();
+app.post('/query', async (req, res) => {
+  const query = req.body.query.trim()
 
-  const response = await runQuery(query);
-  res.json({ response });
-});
+  const response = await runQuery(query)
+  res.json({ response })
+})
 ```
 
 When a POST request is sent to the `(/query)` endpoint with `I am unable to activate my account` the agent responds with a reply generated using the domain-specific knowledge base.
