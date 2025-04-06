@@ -9,7 +9,7 @@ authorSlug: 'anish-ghimire'
 banner: '/img/rag/rag-implementation-banner.png'
 bannerAlt: 'Retrieval-Augmented Generation (RAG) - Implementation Banner'
 tags: ['ai', 'rag']
-featured: true
+featured: false
 ---
 
 Too much has been spoken, and [theory](https://sarvalekh.com/blog/retrieval-augmented-generation-introduction-part-i) is boring. In this blog, we will go through implementing a RAG-based customer support AI agent using [Ollama](https://ollama.com/), [NodeJS](https://nodejs.org/en), and [LanceDB](https://lancedb.com/).

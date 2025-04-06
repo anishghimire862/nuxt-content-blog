@@ -1,6 +1,6 @@
 ---
 id: 7
-title: 'How to set up a Node.js project'
+title: 'How to Set Up a Node.js Project'
 slug: 'how-to-set-up-a-nodejs-project'
 description: 'In this blog, we will go through the process of setting up a Node.js project.'
 published: true
