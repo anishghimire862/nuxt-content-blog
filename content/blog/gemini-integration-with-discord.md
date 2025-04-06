@@ -16,7 +16,7 @@ In this blog, we will work on integrating LLMs in [Discord](https://discord.com/
 
 Our implementation will use the [OpenAI](https://platform.openai.com/docs/libraries) SDK and support any OpenAI-compatible models, along with local models using Ollama.
 
-We will be using [Node.js](https://nodejs.org/en) to connect our Discord bot to an LLM, which will listen for messages, process the message using the LLM of our choice (in this blog, we will be using Gemini), and reply with the generated response back to Discord.
+We will be using [Node.js](https://nodejs.org/en) to connect our Discord bot to an LLM, which will listen for messages, process the message using the LLM of our choice (in this blog, we will be using [Gemini](https://gemini.google.com/app)), and reply with the generated response back to Discord.
 
 Before diving into the implementation, let's examine what the integration flow looks like.
 
@@ -53,6 +53,8 @@ OPENAI_API_KEY=openai_compatible_api_key
 OPENAI_BASE_URL=openai_compatible_api_base_url
 OPENAI_MODEL=model_name_eg_gemini-2.0-flash
 ```
+
+To use local models with Ollama, update `OPENAI_BASE_URL` to `http://localhost:11434/v1` and leave OPENAI_API_KEY empty.
 
 Once we've updated the environment file, it's time to implement the logic required to integrate the LLM into our Discord server.
 
@@ -191,6 +193,8 @@ client.on('messageCreate', async (message) => {
 ```
 
 The generated response is then sent back to the Discord channel, allowing the bot to reply to the user’s query.
+
+![Discord LLM Chat Bot](/img/gemini-discord-bot/discord-llm-chat.jpeg)
 
 To view the full source code, please visit the GitHub repository [here](https://github.com/anishghimire862/discord-llm-bot/).
 
