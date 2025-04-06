@@ -23,7 +23,6 @@
       <ProseP>{{ blog.description }}</ProseP>
     </NuxtLink>
     <div class="flex items-center space-x-2 justify-between">
-      <!-- <Author :author-slug="`anish-ghimire`" /> -->
       <div class="text-xs text-gray-500">
         {{ formatDate(new Date(blog.posted), 'MMM D, YYYY') }}
       </div>

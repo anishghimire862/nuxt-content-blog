@@ -6,17 +6,17 @@ description: 'In this blog, we will explore the technical details of integrating
 published: true
 posted: 2025-04-05
 authorSlug: 'anish-ghimire'
-banner: '/img/gemini-discord-bot/discord-llm-chat.jpeg'
-bannerAlt: ''
+banner: 'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExem9sY21oYng5bG10b3F5dzR6ZjV1MXBoMzFkZ2oyOGo0Y3Vrc3YyNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gc5RMzGDNX0HXfWMAx/giphy.gif'
+bannerAlt: 'Gemini Integration with Discord in Action'
 tags: ['ai', 'gen ai']
 featured: true
 ---
 
-In this blog, we will work on integrating LLMs in Discord. The integration will enable you to use the Discord server as an LLM frontend.
+In this blog, we will work on integrating LLMs in [Discord](https://discord.com/). The integration will enable you to use the Discord server as an LLM frontend.
 
-Our implementation will use the OpenAI SDK and support any OpenAI-compatible models, along with local models using Ollama.
+Our implementation will use the [OpenAI](https://platform.openai.com/docs/libraries) SDK and support any OpenAI-compatible models, along with local models using Ollama.
 
-We will be using Node.js to connect our Discord bot to an LLM, which will listen for messages, process the message using the LLM of our choice (in this blog, we will be using Gemini), and reply with the generated response back to Discord.
+We will be using [Node.js](https://nodejs.org/en) to connect our Discord bot to an LLM, which will listen for messages, process the message using the LLM of our choice (in this blog, we will be using Gemini), and reply with the generated response back to Discord.
 
 Before diving into the implementation, let's examine what the integration flow looks like.
 
