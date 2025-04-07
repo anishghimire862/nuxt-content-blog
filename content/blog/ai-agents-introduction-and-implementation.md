@@ -98,7 +98,7 @@ The knowledge base can come in various formats, such as a site's FAQs, databases
 
 We first read the content of the knowledge base from the `knowledge.json` file. The knowledge base contains domain-specific information that is generally not included in the training data of an LLM or may not be available on the internet.
 
-```javascript
+```js
 let knowledgeBase = {}
 fs.readFile('knowledge.json', 'utf8', (err, data) => {
   if (err) {
@@ -111,7 +111,7 @@ fs.readFile('knowledge.json', 'utf8', (err, data) => {
 
 Once the knowledge base is loaded, we handle user queries and interact with the Ollama API.
 
-```javascript
+```js
 async function runQuery(query) {
   const knowledgeContent = JSON.stringify(knowledgeBase)
   const prompt = `
@@ -149,7 +149,7 @@ Once the model completes processing the query and a response is generated, we re
 
 We’ve come to the final part of the code, where we will set up the `(/query)` API endpoint that listens for POST requests, processes the user's query, and then returns the response from the LLM to the user.
 
-```javascript
+```js
 app.post('/query', async (req, res) => {
   const query = req.body.query.trim()
 

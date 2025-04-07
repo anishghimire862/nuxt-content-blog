@@ -40,7 +40,7 @@ Go to the Node [download](https://nodejs.org/en/download) page to download and i
 
 Navigate to the directory where you want to create a Node project and run the following commands:
 
-```BASH
+```bash
 cd Projects/
 
 mkdir node-setup && cd node-setup
@@ -54,19 +54,19 @@ To initialize the project, run `npm init` or `npm init -y`. Running the init com
 
 To install dependencies, run:
 
-```BASH
+```bash
 npm install {{ package name }}
 ```
 
 We will install [dotenv](https://dotenvx.com/), and [Nodemon](https://nodemon.io/) to set up our project.
 
-```BASH
+```bash
 npm install dotenv
 ```
 
 Nodemon is a dependency used during the development process and is not required in the production environment. Therefore, we will install it using the `--save-dev` flag. Nodemon monitors file changes and automatically restarts the development server.
 
-```BASH
+```bash
 npm install nodemon --save-dev
 ```
 
@@ -74,7 +74,7 @@ npm install nodemon --save-dev
 
 While the structure of a project completely depends on the developer and the team, a good project structure helps with the project's maintainability. So, let's create a very basic project structure for our new application.
 
-```JS
+```bash
 node-setup/
 ├── .env
 ├── src/
@@ -89,7 +89,7 @@ node-setup/
 
 We will create a `.env` file and define configurations such as PORT and HOST there in our case.
 
-```ENV
+```bash
 HOST=localhost
 PORT=3344
 ```
@@ -104,7 +104,7 @@ Reading sensitive data from the `.env` file and avoiding pushing tokens and keys
 
 As an example, we'll create a very basic Node server using the [http](https://nodejs.org/api/http.html) module and run the server on a specific port.
 
-```JS
+```js
 import 'dotenv/config'
 import { createServer } from 'http'
 
@@ -132,13 +132,13 @@ This is because we've installed Nodemon as a development dependency for the proj
 
 To install Nodemon globally and use the command directly, run the following command:
 
-```BASH
+```bash
 npm install -g nodemon
 ```
 
 Alternatively, you can configure a script in `package.json` to run Nodemon via NPM:
 
-```JSON
+```json
 "scripts": {
   "dev": "nodemon src/index.js"
 }
@@ -148,7 +148,7 @@ Alternatively, you can configure a script in `package.json` to run Nodemon via N
 
 Once we've added the above script, we can run `npm run dev` to start the development server.
 
-```BASH
+```bash
 npm run dev
 ```
 
@@ -166,7 +166,7 @@ Once the repository is created, navigate to your project directory and run the c
 
 ![GitHub New Repository Instructions](/img/setup-nodejs/github-repo-created.jpeg)
 
-```BASH
+```bash
 git init
 
 git remote add origin git@github.com:anishghimire862/node-setup.git
@@ -178,7 +178,7 @@ git remote add origin git@github.com:anishghimire862/node-setup.git
 
 There are certain files that we don't want to push to the version control provider. An example of such files is the `.env` file, which stores sensitive information such as keys, tokens, secrets, and configuration. The [.gitignore](https://www.toptal.com/developers/gitignore) file is a special file used in Git to prevent tracking of files and directories listed within it.
 
-```JS
+```bash
 node_modules/
 .env
 ```
@@ -187,7 +187,7 @@ In our case, we'll create a `.gitignore` file and add `.env` and `node_modules/`
 
 Since this is a new repository, we first need to initialize an empty Git repository locally and add a remote connection to link it with the GitHub repository
 
-```BASH
+```bash
 git add .
 
 git commit -m "chore: setup node project"

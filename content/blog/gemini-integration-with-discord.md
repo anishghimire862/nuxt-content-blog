@@ -36,7 +36,7 @@ We'll jump straight into implementing our bot's logic. However, if you need inst
 
 To keep the example implementation simple, we’ll set up our Node project with the following structure:
 
-```
+```bash
 discord-llm-bot/
 ├── .env
 └── bot.js
@@ -45,7 +45,7 @@ discord-llm-bot/
 
 Let's first update the `.env` file with the required configuration and credentials.
 
-```ENV
+```bash
 DISCORD_BOT_TOKEN=your_discord_bot_token
 DEFAULT_CHANNEL_ID=default_channel_to_send_bot_status_messages
 
@@ -60,7 +60,7 @@ Once we've updated the environment file, it's time to implement the logic requir
 
 In the `bot.js` file, make the following changes as discussed below:
 
-```JS
+```js
 import 'dotenv/config'
 import { Client, GatewayIntentBits } from 'discord.js'
 import { OpenAI } from 'openai'
@@ -80,7 +80,7 @@ Now, we’ll set up both the OpenAI client and the Discord client.
 
   Similarly, we’ll initialize the Discord client with specific intents. The intents array defines the types of events the bot will listen to, such as receiving messages, interacting with guilds, and accessing message content.
 
-```JS
+```js
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
   baseURL: process.env.OPENAI_BASE_URL,
@@ -97,13 +97,13 @@ const client = new Client({
 
 Since we don’t want to process every message sent to the Discord server, we’ll set a prefix to a specific value. We will then only process messages that begin with this defined prefix. In this case, we’ll only process messages that start with `!ai`. For example, `!ai why is the sky blue?`.
 
-```JS
+```js
 const BOT_PREFIX = '!ai'
 ```
 
 Once our Node server receives a `ready` event from the Discord client, we will send a message to the default channel, confirming that the bot is online and ready to process user messages.
 
-```JS
+```js
 client.once('ready', () => {
   console.log(`Bot is online as ${client.user.tag}`)
 
@@ -119,7 +119,7 @@ client.once('ready', () => {
 
 Once we receive the `messageCreate` event, we will first check whether the event should be processed or discarded. If the event is triggered by the bot itself or if the message content does not start with the defined `BOT_PREFIX`, we will discard the event and return without processing the request.
 
-```JS
+```js
 client.on('messageCreate', async (message) => {
   if (message.author.bot || !message.content.startsWith(BOT_PREFIX)) return
 })
@@ -127,7 +127,7 @@ client.on('messageCreate', async (message) => {
 
 When the received event is meant to be processed, we will immediately send a typing status to the Discord channel from which the message was sent and then proceed with processing the request.
 
-```JS
+```js
 client.on('messageCreate', async (message) => {
   // ...
   await message.channel.sendTyping()
@@ -141,7 +141,7 @@ To maintain the conversation context and generate appropriate responses, we will
 
 We also clean up the message history to avoid hitting the context window limitation and to ensure a higher quality response. In our case, the bot’s status messages such as online, disconnected, or error are prefixed with [ AUTO ] and are removed before sending the context to the LLM.
 
-```JS
+```js
 client.on('messageCreate', async (message) => {
   // ...
   const messages = await message.channel.messages.fetch({ limit: 10 })
@@ -170,7 +170,7 @@ client.on('messageCreate', async (message) => {
 
 Now that we have a clean message history and everything else in place, we will call OpenAI's chat completion API using the `create` method to generate a response.
 
-```JS
+```js
 client.on('messageCreate', async (message) => {
   // ...
   try {
