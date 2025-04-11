@@ -42,7 +42,7 @@ To keep it simple, we'll be using [Ollama](https://ollama.com), [NodeJS](https:/
 
 We’ll set up a NodeJS project in the following structure:
 
-```
+```bash
 ai-tool-calling/
 ├── index.js
 ├── tools.js
@@ -63,13 +63,13 @@ npm i dotenv ollama node-fetch readline-sync
 
 Once the project is set up and the packages are installed, let's update the .env file and add the GitHub Personal Access Token to safely use throughout our codebase.
 
-```env
+```bash
 GITHUB_TOKEN=github_personal_access_token
 ```
 
 Once you've updated the `.env` file, head over to the `tools.js` file and add a function to create GitHub issues.
 
-```JS
+```js
 import 'dotenv/config'
 import fetch from 'node-fetch'
 
@@ -83,7 +83,7 @@ The repository is where we will be creating and listing GitHub issues.
 
 Let's define the function responsible for creating new GitHub issues.
 
-```JS
+```js
 // imports...
 
 export async function createGitHubIssue({ title, body, labels }) {
@@ -121,7 +121,7 @@ The above-defined `createGitHubIssue()` function takes `title`, `body`, and `lab
 
 Let's write some logic in our `index.js` file and start working on building our GitHub Assistant CLI chatbot.
 
-```JS
+```js
 import { question } from 'readline-sync'
 import { Ollama } from 'ollama'
 import { listGitHubIssues, createGitHubIssue } from './tools.js'
@@ -144,7 +144,7 @@ startCLI()
 
 In the above code snippet, we have set up our CLI application to allow interaction through the command line. The program runs an infinite loop to continuously listen for user input until the user types "exit." To process user queries using an LLM, the program calls the `chatWithAI(userInput)` method, which we will discuss next.
 
-```JS
+```js
 async function chatWithAI(userInput) {
   const response = await client.chat({
     model: 'llama3.1',
@@ -207,7 +207,7 @@ Not all models support tool calling. To find out which models do, you can [visit
 
 To enable tool calling, we're using the `chat` method provided by Ollama. The generate method doesn't support tool calling because it is designed for single-shot text generation.
 
-```JS
+```js
 const response = await client.chat({
   // ...
 })
@@ -215,7 +215,7 @@ const response = await client.chat({
 
 We've defined the `messages` array to structure the conversation context. The system message serves as an instruction manual for the AI, while the user message contains the user's query.
 
-```JS
+```js
 messages: [
   {
     role: 'system',
@@ -234,7 +234,7 @@ messages: [
 
 We'll provide the list of `tools` via the tools field.
 
-```JS
+```js
 tools: [
   // other tools...,
   {
@@ -247,7 +247,7 @@ tools: [
 
 Now, if the model being used supports tool calling and detects that a tool call is required, the model generates a response with a `tool_calls` field.
 
-```JS
+```js
 const toolCalls = response.message?.tool_calls
 
 if (toolCalls) {

@@ -18,7 +18,7 @@ Too much has been spoken, and [theory](https://sarvalekh.com/blog/retrieval-augm
 
 We’ll set up a NodeJS project in the following structure:
 
-```
+```bash
 ai-rag/
 ├── db/
 ├── knowledge-base/
@@ -48,7 +48,7 @@ Our knowledge base consists of 3 files in PDF, CSV, and TXT formats. The files i
 
 To split documents into chunks, we'll use the `RecursiveCharacterTextSplitter` class from the `@langchain/textsplitters` package. Splitting documents into chunks helps with efficient retrieval and improves content generation.
 
-```JS
+```js
 import fs from 'fs/promises'
 import path from 'path'
 import { RecursiveCharacterTextSplitter } from '@langchain/textsplitters'
@@ -78,7 +78,7 @@ In the above code snippet, we've read the knowledge base directory and processed
 
 Now, let's look at the implementation of the `processFile()` method in the `utils.js` file to see how we've extracted and converted the knowledge base from various formats into plain text.
 
-```JS
+```js
 import { promises as fs } from 'fs'
 import { extname } from 'path'
 import pdfParse from 'pdf-parse/lib/pdf-parse.js'
@@ -121,7 +121,7 @@ You can apply a similar approach when processing other types of files. For examp
 
 Once the documents are split into smaller chunks, we will convert each chunk into an embedding using Ollama's [JavaScript library](https://www.npmjs.com/package/ollama). We'll also use the same library to interact with our locally running LLM.
 
-```JS
+```js
 import { Ollama } from 'ollama'
 
 const ollama = new Ollama({ host: 'http://localhost:11434' })
@@ -142,7 +142,7 @@ for (const chunk of chunks) {
 
 These embeddings can be stored in a vector database - we will use `LanceDB` in our demonstration. Storing embeddings in a vector database allows us to perform similarity searches and enables RAG systems to find the most relevant chunks based on the user's query.
 
-```JS
+```js
 const dbPath = path.resolve('./db')
 const db = await connect(dbPath)
 
@@ -168,7 +168,7 @@ Once we've prepared our knowledge base and implemented the ingestion logic, we c
 
 Now comes the main part of retrieving relevant context that is related to the user's query, so that the LLM can generate an accurate and domain-specific response.
 
-```JS
+```js
 import { Ollama } from 'ollama'
 
 async function processQuery(query) {
@@ -198,7 +198,7 @@ Once the embedding of the user's query is generated, we perform a vector search 
 
 When asked, "What’s the warranty period?", it was able to retrieve the following context:
 
-```
+```bash
 ...
 
 15. What’s the warranty period?
@@ -209,7 +209,7 @@ It comes with a 1-year limited warranty covering defects in materials or workman
 
 Now comes the final part of RAG: generating a response using the prompt that includes both the user's query and the retrieved context.
 
-```JS
+```js
 async function generateResponse(query, context) {
   const ollama = new Ollama({ host: 'http://localhost:11434' })
 
